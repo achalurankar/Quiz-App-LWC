@@ -9,6 +9,7 @@
 <template>
     <div class="container">
         <div class="card overview-layout">
+            <span>Time Remaining {timer}</span>
             <div class="overview--boxes">
                 <template for:each={questions} for:item="question">
                     <template if:true={question.isQuestionAttempted}>

@@ -6,6 +6,7 @@ export default class Quiz extends LightningElement {
     @track questions;
     @track selectedQuestion = { text : "Loading..." };
     idVsQuestionMap = {}
+    @track timer = '00:00'
 
     SINGLE_CHOICE = "Single"
     DOUBLE_CHOICE = "Double"
@@ -22,11 +23,21 @@ export default class Quiz extends LightningElement {
                     this.idVsQuestionMap[`${obj.index}`] = obj
                 }
                 this.selectedQuestion = this.questions[0]
-                // console.log(JSON.stringify(this.questions))
+                this.startTimer(5400)
             })
             .catch(err => {
                 console.log(err)
             })
+    }
+    
+    startTimer(time) {
+        let intervalId = window.setInterval(() => {
+            if(time == 0) window.clearInterval(intervalId)
+            let min = Math.floor(time / 60)
+            let sec = time % 60
+            this.timer = `${ min < 10 ? `0${min}` : min }:${ sec < 10 ? `0${sec}` : sec }`
+            time--
+        }, 1000)
     }
 
     getCorrectIds(arr) {
