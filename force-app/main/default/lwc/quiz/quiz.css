@@ -23,7 +23,7 @@
 
 .overview--boxes {
     display: grid;
-    grid-template: 45px 45px / repeat(15, 1fr);
+    grid-template: 45px 45px 45px / repeat(15, 1fr);
     padding-left: 15px;
     padding-top: 15px;
 }
