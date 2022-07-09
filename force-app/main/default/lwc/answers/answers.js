@@ -52,7 +52,7 @@ export default class Answers extends LightningElement {
                 else
                     option.selected = false
             }
-        } else if(question.type == this.SINGLE_CHOICE || question.type == this.DOUBLE_CHOICE) {
+        } else if(question.type == this.DOUBLE_CHOICE || question.type == this.TRIPLE_CHOICE) {
             for(let option of question.options) {
                 if(question.selectedOptionsIds.includes(option.value)) {
                     option.selected = true
