@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #F2F2FE;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.card {
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+
+.overview-layout-container {
+    width: 800px;    
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    row-gap: 10px;
+}
+
+.question-layout-container--content {
+    display: flex;
+    flex-direction: column; 
+    row-gap: 10px;
+}
+
+textarea {
+    height: 300px;
+}
+
+.score {
+    width: 800px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}

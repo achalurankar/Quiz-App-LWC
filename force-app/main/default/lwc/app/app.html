@@ -1,0 +1,9 @@
+<template>
+    <template if:true={showQuiz}>
+        <c-quiz onsubmit={handleSubmit}></c-quiz>
+    </template>
+
+    <template if:false={showQuiz}>
+        <c-answers questions={questions}></c-answers>
+    </template>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <div class="container">
+        <div class="score card">
+            You've scored  {score} .
+        </div>
+        <div class="card overview-layout-container">
+            <template for:each={questions} for:item="question">
+                <div key={question.id} class="question-layout-container--content">
+                    <span>Question {question.index}.</span>
+                    <textarea readonly>{question.text}</textarea>
+                    <template for:each={question.options} for:item="option">
+                        <div key={option.id} style="display: flex; flex-direction:column; row-gap:5px">
+                            <div style="display: flex; flex-direction:row; column-gap:10px">
+                                <input type="checkbox" value={option.value} checked={option.selected} disabled></input>
+                                <span>{option.label}</span>
+                            </div>
+                            <template if:true={option.correct}>
+                                <span style="color: green; font-weight:bold">Correct</span>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>
