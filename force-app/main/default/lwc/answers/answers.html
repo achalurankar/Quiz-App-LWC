@@ -17,6 +17,9 @@
                             <template if:true={option.correct}>
                                 <span style="color: green; font-weight:bold">Correct</span>
                             </template>
+                            <template if:true={option.isIncorrect}>
+                                <span style="color: red; font-weight:bold">Incorrect</span>
+                            </template>
                         </div>
                     </template>
                 </div>

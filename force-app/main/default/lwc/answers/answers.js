@@ -51,6 +51,7 @@ export default class Answers extends LightningElement {
                     option.selected = true
                 else
                     option.selected = false
+                this.checkIncorrect(option)
             }
         } else if(question.type == this.DOUBLE_CHOICE || question.type == this.TRIPLE_CHOICE) {
             for(let option of question.options) {
@@ -59,7 +60,16 @@ export default class Answers extends LightningElement {
                 } else {
                     option.selected = false
                 }
+                this.checkIncorrect(option)
             }
+        }
+    }
+
+    checkIncorrect(option) {
+        if(option.selected && !option.correct) {
+            option.isIncorrect = true
+        } else {
+            option.isIncorrect = false
         }
     }
 }
