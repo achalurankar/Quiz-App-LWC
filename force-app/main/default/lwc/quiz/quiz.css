@@ -1,13 +1,30 @@
 .container {
     display: flex;
-    flex-direction: column;
-    row-gap: 15px;
+    flex-direction: row;
+    column-gap: 10px;
     justify-content: center;
-    align-items: center;
     padding: 10px;
     background-color: #F2F2FE;
     font-family: monospace;
     font-size: 14px;
+}
+
+.set-dropdown-layout {
+    width: 200px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 15px;
+    align-items: center;
+}
+
+.quiz-layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {

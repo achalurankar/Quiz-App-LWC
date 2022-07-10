@@ -7,13 +7,28 @@ export default class Quiz extends LightningElement {
     @track selectedQuestion = { text : "Loading..." };
     idVsQuestionMap = {}
     @track timer = '00:00'
+    currentIntervalId = null
+    @track selectedSet = ''
+    sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
+    
+    handleSetChange(event) {
+        this.selectedSet = event.detail.value; 
+    }
+    
+    handleStartClick() {
+        this.loadQuestions(this.selectedSet)
+    }
 
     SINGLE_CHOICE = "Single"
     DOUBLE_CHOICE = "Double"
     TRIPLE_CHOICE = "Triple"
 
     connectedCallback() {
-        getQuestions()
+        this.loadQuestions(null)
+    }
+
+    loadQuestions(paperSet) {
+        getQuestions({ paperSet : paperSet })
             .then(res => {
                 this.questions = JSON.parse(JSON.stringify(res))
                 for(let obj of this.questions) {
@@ -31,8 +46,10 @@ export default class Quiz extends LightningElement {
     }
     
     startTimer(time) {
-        let intervalId = window.setInterval(() => {
-            if(time == 0) window.clearInterval(intervalId)
+        if(this.currentIntervalId) 
+            window.clearInterval(this.currentIntervalId)
+        this.currentIntervalId = window.setInterval(() => {
+            if(time == 0) window.clearInterval(this.currentIntervalId)
             let min = Math.floor(time / 60)
             let sec = time % 60
             this.timer = `${ min < 10 ? `0${min}` : min }:${ sec < 10 ? `0${sec}` : sec }`
