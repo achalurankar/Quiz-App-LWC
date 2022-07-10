@@ -11,6 +11,7 @@ global with sharing class QuestionCreator {
                 Question__c question = new Question__c();
                 question.Text__c = wrapper.text;
                 question.Type__c = wrapper.type;
+                question.Set__c = wrapper.questionSet;
                 questions.add(question);
                 textVsWrapperMap.put(wrapper.text, wrapper);
             }
