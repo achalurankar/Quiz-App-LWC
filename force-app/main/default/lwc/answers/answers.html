@@ -1,3 +1,4 @@
+<!-- sldsValidatorIgnore -->
 <template>
     <div class="container">
         <div class="score card">
@@ -7,6 +8,7 @@
             <template for:each={questions} for:item="question">
                 <div key={question.id} class="question-layout-container--content">
                     <span>Question {question.index}.</span>
+                    <!-- sldsValidatorIgnoreNextLine -->
                     <textarea readonly>{question.text}</textarea>
                     <template for:each={question.options} for:item="option">
                         <div key={option.id} style="display: flex; flex-direction:column; row-gap:5px">
