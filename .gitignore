@@ -5,6 +5,7 @@
 # Local Files
 mocks/
 designs/
+scripts/
 
 # Salesforce cache
 .sf/
