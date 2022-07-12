@@ -109,7 +109,6 @@ export default class Quiz extends LightningElement {
     handleRadioSelect(event) {
         this.selectedQuestion.selectedOptionId = event.detail.value
         this.selectedQuestion.isQuestionAttempted = true
-        this.currentQuizInstance.questions = this.questions
         this.saveQuizInstance()
     }
 
@@ -120,7 +119,6 @@ export default class Quiz extends LightningElement {
         } else {
             this.selectedQuestion.isQuestionAttempted = true
         }
-        this.currentQuizInstance.questions = this.questions
         this.saveQuizInstance()
     }
 
@@ -147,6 +145,7 @@ export default class Quiz extends LightningElement {
 
     handleMarkForRevisit(event) {
         this.selectedQuestion.isMarkedForRevisit = event.detail.checked;
+        this.saveQuizInstance()
     }
 
     shuffle(array) {
