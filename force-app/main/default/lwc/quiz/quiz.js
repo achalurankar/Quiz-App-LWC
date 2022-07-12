@@ -10,9 +10,11 @@ export default class Quiz extends LightningElement {
     currentIntervalId = null
     @track selectedSet = ''
     sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
-    
+    QUIZ_TIME_LIMIT = 90 * 60 * 1000 // 90 minutes into milliseconds
+    currentQuizInstance
+
     handleSetChange(event) {
-        this.selectedSet = event.detail.value; 
+        this.selectedSet = event.detail.value;
     }
     
     handleStartClick() {
@@ -24,7 +26,25 @@ export default class Quiz extends LightningElement {
     TRIPLE_CHOICE = "Triple"
 
     connectedCallback() {
-        this.loadQuestions(null)
+        this.currentQuizInstance = JSON.parse(window.localStorage.getItem('currentQuiz'))
+        console.log('quiz instance', this.currentQuizInstance);
+        if(this.currentQuizInstance) {
+            let currTime = Date.now()
+            let quizStartTime = this.currentQuizInstance.startTime;
+            console.log('currTime', currTime)
+            console.log('quizStartTime', quizStartTime)
+            console.log('currTime - quizStartTime', currTime - quizStartTime)
+            console.log('quiz time limit', this.QUIZ_TIME_LIMIT)
+            if(currTime - quizStartTime >= this.QUIZ_TIME_LIMIT) {
+                console.log('time limit for quiz exceeded')
+                window.localStorage.clear()
+            } else {
+                console.log('quiz is active')
+                this.questions = this.currentQuizInstance.questions
+                this.selectedQuestion = this.questions[0]
+                this.startTimer(Math.floor((this.QUIZ_TIME_LIMIT - (currTime - quizStartTime)) / 1000))
+            }
+        }
     }
 
     loadQuestions(paperSet) {
@@ -39,10 +59,17 @@ export default class Quiz extends LightningElement {
                 }
                 this.selectedQuestion = this.questions[0]
                 this.startTimer(5400)
+                this.currentQuizInstance = { startTime : Date.now() }
+                this.saveQuizInstance()
             })
             .catch(err => {
                 console.log(err)
             })
+    }
+
+    saveQuizInstance() {
+        this.currentQuizInstance.questions = this.questions
+        window.localStorage.setItem('currentQuiz', JSON.stringify(this.currentQuizInstance))
     }
     
     startTimer(time) {
@@ -81,6 +108,8 @@ export default class Quiz extends LightningElement {
     handleRadioSelect(event) {
         this.selectedQuestion.selectedOptionId = event.detail.value
         this.selectedQuestion.isQuestionAttempted = true
+        this.currentQuizInstance.questions = this.questions
+        this.saveQuizInstance()
     }
 
     handleMultiSelect(event) {
@@ -90,6 +119,8 @@ export default class Quiz extends LightningElement {
         } else {
             this.selectedQuestion.isQuestionAttempted = true
         }
+        this.currentQuizInstance.questions = this.questions
+        this.saveQuizInstance()
     }
 
     handlePrevClick(event) {
@@ -110,6 +141,7 @@ export default class Quiz extends LightningElement {
 
     handleSubmitClick(event) {
         this.dispatchEvent(new CustomEvent('submit', { detail : { questions : this.questions } } ))
+        window.localStorage.clear()
     }
 
     shuffle(array) {
