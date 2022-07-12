@@ -8,7 +8,7 @@ export default class Quiz extends LightningElement {
     idVsQuestionMap = {}
     @track timer = '00:00'
     currentIntervalId = null
-    @track selectedSet = ''
+    @track selectedSet = null
     sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
     
     handleSetChange(event) {
@@ -24,7 +24,7 @@ export default class Quiz extends LightningElement {
     TRIPLE_CHOICE = "Triple"
 
     connectedCallback() {
-        this.loadQuestions(null)
+        
     }
 
     loadQuestions(paperSet) {
