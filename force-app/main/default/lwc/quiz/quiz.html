@@ -26,18 +26,29 @@
                 <span>Time Remaining {timer}</span>
                 <div class="overview--boxes">
                     <template for:each={questions} for:item="question">
-                        <template if:true={question.isQuestionAttempted}>
-                            <div key={question.id} data-index={question.index} onclick={handleQuestionClick} class="overview--boxes--box selected">{question.index}</div>
+                        <template if:true={question.isMarkedForRevisit}>
+                            <div key={question.id} data-index={question.index} onclick={handleQuestionClick} class="overview--boxes--box revisit">{question.index}</div>
                         </template>
-                        <template if:false={question.isQuestionAttempted}>
-                            <div key={question.id} data-index={question.index} onclick={handleQuestionClick} class="overview--boxes--box">{question.index}</div>
+                        <template if:false={question.isMarkedForRevisit}>
+                            <template if:true={question.isQuestionAttempted}>
+                                <div key={question.id} data-index={question.index} onclick={handleQuestionClick} class="overview--boxes--box selected">{question.index}</div>
+                            </template>
+                            <template if:false={question.isQuestionAttempted}>
+                                <div key={question.id} data-index={question.index} onclick={handleQuestionClick} class="overview--boxes--box">{question.index}</div>
+                            </template>
                         </template>
                     </template>
                 </div>
             </div>
             <div class="card question-layout">
                 <div class="question-layout--content">
-                    <span>Question {selectedQuestion.index}.</span>
+                    <div class="row-flex space-between">
+                        <span>Question {selectedQuestion.index}.</span>
+                        <div class="row-flex c-gap-5">
+                            <span>Mark for revisit</span>
+                            <lightning-input type="checkbox" checked={selectedQuestion.isMarkedForRevisit} onchange={handleMarkForRevisit}></lightning-input>
+                        </div>
+                    </div>
                     <textarea readonly>{selectedQuestion.text}</textarea>
                     <template if:true={isSingle}>
                         <lightning-radio-group name="radioGroup"

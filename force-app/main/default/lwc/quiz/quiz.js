@@ -34,7 +34,8 @@ export default class Quiz extends LightningElement {
                 for(let obj of this.questions) {
                     obj.options = this.shuffle([...obj.correctOptions, ...obj.incorrectOptions])
                     obj.correctIds = this.getCorrectIds(obj.correctOptions)
-                    obj.isQuestionAttempted = obj.selectedOptionId != '' || obj.selectedOptionsIds.length != 0
+                    obj.isQuestionAttempted = false
+                    obj.isMarkedForRevisit = false
                     this.idVsQuestionMap[`${obj.index}`] = obj
                 }
                 this.selectedQuestion = this.questions[0]
@@ -110,6 +111,10 @@ export default class Quiz extends LightningElement {
 
     handleSubmitClick(event) {
         this.dispatchEvent(new CustomEvent('submit', { detail : { questions : this.questions } } ))
+    }
+
+    handleMarkForRevisit(event) {
+        this.selectedQuestion.isMarkedForRevisit = event.detail.checked;
     }
 
     shuffle(array) {
