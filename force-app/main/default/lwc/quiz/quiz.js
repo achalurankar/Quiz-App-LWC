@@ -12,9 +12,14 @@ export default class Quiz extends LightningElement {
     sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
     QUIZ_TIME_LIMIT = 90 * 60 * 1000 // 90 minutes into milliseconds
     currentQuizInstance
+    sequence = false;
 
     handleSetChange(event) {
         this.selectedSet = event.detail.value;
+    }
+
+    handleSequenceChange(event) {
+        this.sequence = event.detail.checked
     }
     
     handleStartClick() {
@@ -48,7 +53,7 @@ export default class Quiz extends LightningElement {
     }
 
     loadQuestions(paperSet) {
-        getQuestions({ paperSet : paperSet })
+        getQuestions({ kvData : { paperSet : paperSet, sequence : this.sequence }})
             .then(res => {
                 this.questions = JSON.parse(JSON.stringify(res))
                 for(let obj of this.questions) {

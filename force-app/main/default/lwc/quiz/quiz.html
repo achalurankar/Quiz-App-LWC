@@ -15,6 +15,7 @@
                 placeholder="Select paper set"
                 options={sets}
                 onchange={handleSetChange} ></lightning-combobox>
+            <lightning-input type="checkbox" checked={sequence} onchange={handleSequenceChange} label="in order as in pdf?"></lightning-input>
             <lightning-button 
                             variant="brand" 
                             label="Start Quiz" 
