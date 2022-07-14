@@ -10,17 +10,19 @@
     <div class="container">
         <div class="card set-dropdown-layout">
             <lightning-combobox
+                name="paperSet"
                 label="Paper Set"
                 value={selectedSet}
                 placeholder="Select paper set"
                 options={sets}
-                onchange={handleSetChange} ></lightning-combobox>
-            <lightning-input type="checkbox" checked={sequence} onchange={handleSequenceChange} label="in order as in pdf?"></lightning-input>
+                onchange={handleInputChange} ></lightning-combobox>
+            <lightning-input type="checkbox" name="sequence" checked={sequence} onchange={handleInputChange} label="in order as in pdf?"></lightning-input>
             <lightning-button 
-                            variant="brand" 
-                            label="Start Quiz" 
-                            onclick={handleStartClick} 
-                            class="slds-m-left_x-small"></lightning-button>
+                name="start"
+                variant="brand" 
+                label="Start Quiz" 
+                onclick={handleButtonClicks} 
+                class="slds-m-left_x-small"></lightning-button>
         </div>
         <div class="quiz-layout">
             <div class="card overview-layout">
@@ -47,43 +49,46 @@
                         <span>Question {selectedQuestion.index}.</span>
                         <div class="row-flex c-gap-5">
                             <span>Mark for revisit</span>
-                            <lightning-input type="checkbox" checked={selectedQuestion.isMarkedForRevisit} onchange={handleMarkForRevisit}></lightning-input>
+                            <lightning-input name="revisit" type="checkbox" checked={selectedQuestion.isMarkedForRevisit} onchange={handleInputChange}></lightning-input>
                         </div>
                     </div>
                     <textarea readonly>{selectedQuestion.text}</textarea>
                     <template if:true={isSingle}>
-                        <lightning-radio-group name="radioGroup"
+                        <lightning-radio-group name="singleChoice"
                                 label="Options"
                                 options={selectedQuestion.options}
                                 value={selectedQuestion.selectedOptionId}
                                 variant="standard"
-                                onchange={handleRadioSelect}
+                                onchange={handleInputChange}
                                 type="radio"></lightning-radio-group>
                     </template>
                     <template if:true={isMultiple}>
-                        <lightning-checkbox-group name="Checkbox Group"
+                        <lightning-checkbox-group name="multipleChoice"
                                     label="Options"
                                     options={selectedQuestion.options}
                                     value={selectedQuestion.selectedOptionsIds}
                                     variant="standard"
-                                    onchange={handleMultiSelect}></lightning-checkbox-group>
+                                    onchange={handleInputChange}></lightning-checkbox-group>
                     </template>
                 </div>
                 <div class="question-layout--content--buttons-layout">
                     <lightning-button 
+                                name="previous"
                                 variant="brand-outline" 
                                 label="Previous" 
-                                onclick={handlePrevClick} 
+                                onclick={handleButtonClicks} 
                                 class="slds-m-left_x-small"></lightning-button>
                     <lightning-button 
+                                name="next" 
                                 variant="brand-outline" 
                                 label="Next" 
-                                onclick={handleNextClick} 
+                                onclick={handleButtonClicks} 
                                 class="slds-m-left_x-small"></lightning-button>
                     <lightning-button 
+                                name="submit"
                                 variant="brand" 
                                 label="Submit" 
-                                onclick={handleSubmitClick} 
+                                onclick={handleButtonClicks} 
                                 class="slds-m-left_x-small"></lightning-button>
                 </div>
             </div>

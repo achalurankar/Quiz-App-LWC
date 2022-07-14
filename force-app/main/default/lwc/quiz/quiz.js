@@ -14,18 +14,6 @@ export default class Quiz extends LightningElement {
     currentQuizInstance
     sequence = false;
 
-    handleSetChange(event) {
-        this.selectedSet = event.detail.value;
-    }
-
-    handleSequenceChange(event) {
-        this.sequence = event.detail.checked
-    }
-    
-    handleStartClick() {
-        this.loadQuestions(this.selectedSet)
-    }
-
     SINGLE_CHOICE = "Single"
     DOUBLE_CHOICE = "Double"
     TRIPLE_CHOICE = "Triple"
@@ -51,6 +39,50 @@ export default class Quiz extends LightningElement {
             }
         }
     }
+    
+    handleInputChange(event) {
+        if(event.target.name == 'paperSet') {
+            this.selectedSet = event.detail.value;
+        } else if(event.target.name == 'sequence') {
+            this.sequence = event.detail.checked
+        } else if(event.target.name == 'revisit') {
+            this.selectedQuestion.isMarkedForRevisit = event.detail.checked;
+            this.saveQuizInstance()
+        } else if(event.target.name == 'singleChoice') {
+            this.selectedQuestion.selectedOptionId = event.detail.value
+            this.selectedQuestion.isQuestionAttempted = true
+            this.saveQuizInstance()
+        } else if(event.target.name == 'multipleChoice') {        
+            this.selectedQuestion.selectedOptionsIds = event.detail.value
+            if(this.selectedQuestion.selectedOptionsIds.length == 0) {
+                this.selectedQuestion.isQuestionAttempted = false
+            } else {
+                this.selectedQuestion.isQuestionAttempted = true
+            }
+            this.saveQuizInstance()
+        }
+    }
+
+    handleButtonClicks(event) {
+        if(event.target.name == 'previous') {
+            let dataIndex = this.selectedQuestion.index;
+            dataIndex--
+            if(dataIndex > 0) {
+                this.selectedQuestion = this.idVsQuestionMap[dataIndex]
+            }
+        } else if(event.target.name == 'next') {
+            let dataIndex = this.selectedQuestion.index;
+            dataIndex++
+            if(dataIndex <= this.questions.length) {    
+                this.selectedQuestion = this.idVsQuestionMap[dataIndex]
+            }
+        } else if(event.target.name == 'submit') {
+            this.dispatchEvent(new CustomEvent('submit', { detail : { questions : this.questions } } ))
+            window.localStorage.clear()
+        } else if(event.target.name == 'start') {
+            this.loadQuestions(this.selectedSet)
+        }
+    } 
 
     loadQuestions(paperSet) {
         getQuestions({ kvData : { paperSet : paperSet, sequence : this.sequence }})
@@ -109,48 +141,6 @@ export default class Quiz extends LightningElement {
 
     get isMultiple() {
         return this.selectedQuestion.type === this.DOUBLE_CHOICE || this.selectedQuestion.type === this.TRIPLE_CHOICE;
-    }
-
-    handleRadioSelect(event) {
-        this.selectedQuestion.selectedOptionId = event.detail.value
-        this.selectedQuestion.isQuestionAttempted = true
-        this.saveQuizInstance()
-    }
-
-    handleMultiSelect(event) {
-        this.selectedQuestion.selectedOptionsIds = event.detail.value
-        if(this.selectedQuestion.selectedOptionsIds.length == 0) {
-            this.selectedQuestion.isQuestionAttempted = false
-        } else {
-            this.selectedQuestion.isQuestionAttempted = true
-        }
-        this.saveQuizInstance()
-    }
-
-    handlePrevClick(event) {
-        let dataIndex = this.selectedQuestion.index;
-        dataIndex--
-        if(dataIndex > 0) {
-            this.selectedQuestion = this.idVsQuestionMap[dataIndex]
-        }
-    }
-
-    handleNextClick(event) {
-        let dataIndex = this.selectedQuestion.index;
-        dataIndex++
-        if(dataIndex <= this.questions.length) {    
-            this.selectedQuestion = this.idVsQuestionMap[dataIndex]
-        }
-    }
-
-    handleSubmitClick(event) {
-        this.dispatchEvent(new CustomEvent('submit', { detail : { questions : this.questions } } ))
-        window.localStorage.clear()
-    }
-
-    handleMarkForRevisit(event) {
-        this.selectedQuestion.isMarkedForRevisit = event.detail.checked;
-        this.saveQuizInstance()
     }
 
     shuffle(array) {
