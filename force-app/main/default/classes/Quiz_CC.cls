@@ -2,9 +2,16 @@ public with sharing class Quiz_CC {
 
     @AuraEnabled
     public static List<QuestionResponseWrapper> getQuestions(Map<String, String> kvData){
-        String paperSet = kvData.get('paperSet');
-        Boolean sequence = Boolean.valueOf(kvData.get('sequence'));
         try {
+            if(kvData == null) {
+                throw new InvalidDataException('failed to provide parameters');
+            }
+            if(!kvData.containsKey('sequence')) {
+                kvData.put('sequence', 'false');
+            }
+            String paperSet = kvData.get('paperSet');
+            Boolean sequence = Boolean.valueOf(kvData.get('sequence'));
+        
             String query = 'SELECT Id, Text__c, Type__c, (SELECT Id, Text__c, Correct__c FROM Options__r) FROM Question__c';
             if(paperSet != null)
                 query += ' WHERE Set__c = \'' + paperSet + '\'';
@@ -22,4 +29,6 @@ public with sharing class Quiz_CC {
             throw new AuraHandledException(e.getMessage());
         }
     }
+
+    public class InvalidDataException extends Exception {}
 }
