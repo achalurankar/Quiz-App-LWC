@@ -35,6 +35,7 @@ export default class Quiz extends LightningElement {
                 console.log('quiz is active')
                 this.questions = this.currentQuizInstance.questions
                 this.selectedQuestion = this.questions[0]
+                this.idVsQuestionMap = this.currentQuizInstance.idVsQuestionMap;
                 this.startTimer(Math.floor((this.QUIZ_TIME_LIMIT - (currTime - quizStartTime)) / 1000))
             }
         }
@@ -107,6 +108,7 @@ export default class Quiz extends LightningElement {
 
     saveQuizInstance() {
         this.currentQuizInstance.questions = this.questions
+        this.currentQuizInstance.idVsQuestionMap = this.idVsQuestionMap
         window.localStorage.setItem('currentQuiz', JSON.stringify(this.currentQuizInstance))
     }
     
