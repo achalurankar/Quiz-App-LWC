@@ -96,10 +96,14 @@ export default class Quiz extends LightningElement {
                     obj.isMarkedForRevisit = false
                     this.idVsQuestionMap[`${obj.index}`] = obj
                 }
-                this.selectedQuestion = this.questions[0]
-                this.startTimer(5400)
-                this.currentQuizInstance = { startTime : Date.now() }
-                this.saveQuizInstance()
+                if(this.questions.length !== 0){
+                    this.selectedQuestion = this.questions[0]
+                    this.startTimer(5400)
+                    this.currentQuizInstance = { startTime : Date.now() }
+                    this.saveQuizInstance()
+                }
+                else
+                    this.selectedQuestion.text = 'No Questions for this set'
             })
             .catch(err => {
                 console.log(err)
