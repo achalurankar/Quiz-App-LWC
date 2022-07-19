@@ -102,8 +102,10 @@ export default class Quiz extends LightningElement {
                     this.currentQuizInstance = { startTime : Date.now() }
                     this.saveQuizInstance()
                 }
-                else
+                else {
+                    this.stopCurrentInterval()
                     this.selectedQuestion.text = 'No Questions for this set'
+                }
             })
             .catch(err => {
                 console.log(err)
@@ -117,8 +119,7 @@ export default class Quiz extends LightningElement {
     }
     
     startTimer(time) {
-        if(this.currentIntervalId) 
-            window.clearInterval(this.currentIntervalId)
+        this.stopCurrentInterval()
         this.currentIntervalId = window.setInterval(() => {
             if(time == 0) window.clearInterval(this.currentIntervalId)
             let min = Math.floor(time / 60)
@@ -126,6 +127,11 @@ export default class Quiz extends LightningElement {
             this.timer = `${ min < 10 ? `0${min}` : min }:${ sec < 10 ? `0${sec}` : sec }`
             time--
         }, 1000)
+    }
+
+    stopCurrentInterval() {
+        if(this.currentIntervalId) 
+            window.clearInterval(this.currentIntervalId)
     }
 
     getCorrectIds(arr) {
