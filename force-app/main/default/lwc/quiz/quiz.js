@@ -10,7 +10,8 @@ export default class Quiz extends LightningElement {
     currentIntervalId = null
     @track selectedSet = null
     sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
-    QUIZ_TIME_LIMIT = 90 * 60 * 1000 // 90 minutes into milliseconds
+    QUIZ_TIME_IN_MIN = 105
+    QUIZ_TIME_LIMIT = this.QUIZ_TIME_IN_MIN * 60 * 1000 // 90 minutes into milliseconds
     currentQuizInstance
     sequence = false;
 
@@ -98,7 +99,7 @@ export default class Quiz extends LightningElement {
                 }
                 if(this.questions.length !== 0){
                     this.selectedQuestion = this.questions[0]
-                    this.startTimer(5400)
+                    this.startTimer(this.QUIZ_TIME_IN_MIN * 60)
                     this.currentQuizInstance = { startTime : Date.now() }
                     this.saveQuizInstance()
                 }
