@@ -84,13 +84,6 @@ textarea {
     height: 300px;
 }
 
-.question-layout--content--buttons-layout {
-    display: flex;
-    flex-direction: row;
-    column-gap: 5px;
-    padding: 10px;
-}
-
 .row-flex {
     display: flex;
     flex-direction: row;

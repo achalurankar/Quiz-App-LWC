@@ -66,25 +66,27 @@ export default class Quiz extends LightningElement {
     }
 
     handleButtonClicks(event) {
-        if(event.target.name == 'previous') {
+        if(event.detail.name == 'previous') {
             let dataIndex = this.selectedQuestion.index;
             dataIndex--
             if(dataIndex > 0) {
                 this.selectedQuestion = this.idVsQuestionMap[dataIndex]
             }
-        } else if(event.target.name == 'next') {
+        } else if(event.detail.name == 'next') {
             let dataIndex = this.selectedQuestion.index;
             dataIndex++
             if(dataIndex <= this.questions.length) {    
                 this.selectedQuestion = this.idVsQuestionMap[dataIndex]
             }
-        } else if(event.target.name == 'submit') {
+        } else if(event.detail.name == 'submit') {
             this.dispatchEvent(new CustomEvent('submit', { detail : { questions : this.questions } } ))
             window.localStorage.clear()
-        } else if(event.target.name == 'start') {
-            this.loadQuestions(this.selectedSet)
         }
     } 
+
+    handleStartClick() {
+        this.loadQuestions(this.selectedSet)
+    }
 
     loadQuestions(paperSet) {
         getQuestions({ kvData : { paperSet : paperSet, sequence : this.sequence }})

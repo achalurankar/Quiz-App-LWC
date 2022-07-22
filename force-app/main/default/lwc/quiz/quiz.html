@@ -21,7 +21,7 @@
                 name="start"
                 variant="brand" 
                 label="Start Quiz" 
-                onclick={handleButtonClicks} 
+                onclick={handleStartClick} 
                 class="slds-m-left_x-small"></lightning-button>
         </div>
         <div class="quiz-layout">
@@ -71,26 +71,7 @@
                                     onchange={handleInputChange}></lightning-checkbox-group>
                     </template>
                 </div>
-                <div class="question-layout--content--buttons-layout">
-                    <lightning-button 
-                                name="previous"
-                                variant="brand-outline" 
-                                label="Previous" 
-                                onclick={handleButtonClicks} 
-                                class="slds-m-left_x-small"></lightning-button>
-                    <lightning-button 
-                                name="next" 
-                                variant="brand-outline" 
-                                label="Next" 
-                                onclick={handleButtonClicks} 
-                                class="slds-m-left_x-small"></lightning-button>
-                    <lightning-button 
-                                name="submit"
-                                variant="brand" 
-                                label="Submit" 
-                                onclick={handleButtonClicks} 
-                                class="slds-m-left_x-small"></lightning-button>
-                </div>
+                <c-navigation-buttons onbutton_click={handleButtonClicks}></c-navigation-buttons>
             </div>
         </div>
     </div>
