@@ -95,6 +95,8 @@ export default class Quiz extends LightningElement {
     loadQuestions(paperSet) {
         getQuestions({ kvData : { paperSet : paperSet, sequence : this.sequence, exam : this.selectedExam }})
             .then(res => {
+                window.localStorage.clear()
+                this.selectedQuestion = {};
                 this.questions = JSON.parse(JSON.stringify(res))
                 for(let obj of this.questions) {
                     obj.options = this.shuffle([...obj.correctOptions, ...obj.incorrectOptions])
