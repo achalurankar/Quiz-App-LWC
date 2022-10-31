@@ -11,10 +11,13 @@ public with sharing class Quiz_CC {
             }
             String paperSet = kvData.get('paperSet');
             Boolean sequence = Boolean.valueOf(kvData.get('sequence'));
+            String exam = kvData.get('exam');
         
             String query = 'SELECT Id, Text__c, Type__c, (SELECT Id, Text__c, Correct__c FROM Options__r) FROM Question__c';
             if(paperSet != null)
-                query += ' WHERE Set__c = \'' + paperSet + '\'';
+                query += ' WHERE Set__c = :paperSet';
+            if(exam != null)
+                query += ' AND Exam__c = :exam';
             if(sequence)
                 query += ' ORDER BY CreatedDate ASC';
             query += ' LIMIT 60';

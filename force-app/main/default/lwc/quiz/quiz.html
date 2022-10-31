@@ -1,14 +1,13 @@
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
-<!-- sldsValidatorIgnore -->
 <template>
     <div class="container">
         <div class="card set-dropdown-layout">
+            <lightning-combobox
+                name="exam"
+                label="Exam"
+                value={selectedExam}
+                placeholder="Select Exam"
+                options={exams}
+                onchange={handleInputChange} ></lightning-combobox>
             <lightning-combobox
                 name="paperSet"
                 label="Paper Set"
@@ -16,7 +15,7 @@
                 placeholder="Select paper set"
                 options={sets}
                 onchange={handleInputChange} ></lightning-combobox>
-            <lightning-input type="checkbox" name="sequence" checked={sequence} onchange={handleInputChange} label="in order as in pdf?"></lightning-input>
+            <!--<lightning-input type="checkbox" name="sequence" checked={sequence} onchange={handleInputChange} label="in order as in pdf?"></lightning-input>-->
             <lightning-button 
                 name="start"
                 variant="brand" 

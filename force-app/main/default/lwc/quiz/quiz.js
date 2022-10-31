@@ -9,7 +9,9 @@ export default class Quiz extends LightningElement {
     @track timer = '00:00'
     currentIntervalId = null
     @track selectedSet = null
+    @track selectedExam = null
     sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
+    exams = [ {label : 'PD1', value : 'PD1'}, {label : 'Admin', value : 'Admin'}]
     QUIZ_TIME_IN_MIN = 105
     QUIZ_TIME_LIMIT = this.QUIZ_TIME_IN_MIN * 60 * 1000 // 90 minutes into milliseconds
     currentQuizInstance
@@ -45,6 +47,8 @@ export default class Quiz extends LightningElement {
     handleInputChange(event) {
         if(event.target.name == 'paperSet') {
             this.selectedSet = event.detail.value;
+        } else if(event.target.name == 'exam') {
+            this.selectedExam = event.detail.value;
         } else if(event.target.name == 'sequence') {
             this.sequence = event.detail.checked
         } else if(event.target.name == 'revisit') {
@@ -89,7 +93,7 @@ export default class Quiz extends LightningElement {
     }
 
     loadQuestions(paperSet) {
-        getQuestions({ kvData : { paperSet : paperSet, sequence : this.sequence }})
+        getQuestions({ kvData : { paperSet : paperSet, sequence : this.sequence, exam : this.selectedExam }})
             .then(res => {
                 this.questions = JSON.parse(JSON.stringify(res))
                 for(let obj of this.questions) {
@@ -107,7 +111,7 @@ export default class Quiz extends LightningElement {
                 }
                 else {
                     this.stopCurrentInterval()
-                    this.selectedQuestion.text = 'No Questions for this set'
+                    this.selectedQuestion.text = 'No Questions for the selected options'
                 }
             })
             .catch(err => {
