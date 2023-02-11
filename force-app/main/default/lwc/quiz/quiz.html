@@ -51,7 +51,7 @@
                             <lightning-input name="revisit" type="checkbox" checked={selectedQuestion.isMarkedForRevisit} onchange={handleInputChange}></lightning-input>
                         </div>
                     </div>
-                    <textarea readonly>{selectedQuestion.text}</textarea>
+                    <pre>{selectedQuestion.text}</pre>
                     <template if:true={isSingle}>
                         <lightning-radio-group name="singleChoice"
                                 label="Options"

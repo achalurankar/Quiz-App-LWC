@@ -80,11 +80,6 @@
     row-gap: 10px;
 }
 
-textarea {
-    resize: none;
-    height: 300px;
-}
-
 .row-flex {
     display: flex;
     flex-direction: row;
