@@ -12,13 +12,15 @@ global with sharing class QuestionCreator {
                 question.Text__c = wrapper.text;
                 question.Type__c = wrapper.type;
                 question.Set__c = wrapper.questionSet;
+                question.Exam__c = wrapper.exam;
+                question.Name = wrapper.uuid;
                 questions.add(question);
-                textVsWrapperMap.put(wrapper.text, wrapper);
+                textVsWrapperMap.put(wrapper.uuid, wrapper);
             }
             insert questions;
             List<Option__c> options = new List<Option__c>();
             for(Question__c question : questions) {
-                CreateQuestionWrapper wrapper = textVsWrapperMap.get(question.Text__c);
+                CreateQuestionWrapper wrapper = textVsWrapperMap.get(question.Name);
                 for(CreateQuestionWrapper.OptionWrapper optWrapper : wrapper.options) {
                     Option__c option = new Option__c();
                     option.Text__c = optWrapper.text;
