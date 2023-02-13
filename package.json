@@ -2,6 +2,7 @@
   "name": "salesforce-app",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Salesforce App",
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**",
@@ -22,6 +23,7 @@
     "@salesforce/eslint-plugin-aura": "^2.0.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
+    "babel-eslint": "^10.1.0",
     "eslint": "^8.11.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.1.2",
@@ -37,5 +39,8 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }

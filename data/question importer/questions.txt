@@ -1,0 +1,77 @@
+A Visualforce page loads slowly due to large amount of data it displays.
+
+Which strategy can a developer use to improve the performance?  
+section-end
+question-type=single
+section-end
+Use a transient keyword for the List variables used in the custom controller
+option-end
+Use Javascript to move data processing to the browser instead of the controller
+option-end
+Use an <apex:actionPoller> in the page to load all of the data asynchronously
+option-end
+Use lazy loading to load the data on demand, Instead of in the controller's constructor
+section-end
+correct=D
+new-question
+After a Platform Event is defined in a Salesforce org, events can be published via which two mechanisms?
+
+Choose 2 answers
+section-end
+question-type=double
+section-end
+Internal Apps can use Outbound Messages
+option-end
+Internal Apps can use Process Builder
+option-end
+External Apps require the standard Streaming API
+option-end
+External Apps use an API to publish event messages
+section-end
+correct=B,D
+new-question
+A lead developer for a Salesforce organization needs to developer a page-centric application that allows user to interact with multiple objects related to a Contact. The application needs to implement a third-party Javascript framework such as Angular, and must be made available in both Classic and Lightning Experience
+
+Given these requirements, what is the recommended solution to developer the application?
+section-end
+question-type=single
+section-end
+Aura Components
+option-end
+Lightning Web Components
+option-end
+Visualforce
+option-end
+Lightning Experience Builder
+section-end
+correct=D
+new-question
+Universal Containers wants to use an external Web Service provided by a third-party vendor to validate that shipping and billing address are correct. The current vendor uses basic password authentication, but Universal Containers might switch to a different vendor who uses OAuth.
+
+Which approach follows best practices and allows Universal Containers to switch vendors without updating the code to handle authentication?
+section-end
+question-type=single
+section-end
+Custom Setting (List)
+option-end
+Named Credential
+option-end
+Custom Metadata
+option-end
+Dynamic Endpoint
+section-end
+correct=B
+new-question
+Which code statement includes an Apex method named updateAccounts in the class AccountController for use in a Lightning web component?
+section-end
+question-type=single
+section-end
+import updateAccounts from '@salesforce/apex/AccountController';
+option-end
+import updateAccounts from 'AccountController';
+option-end
+import updateAccounts from 'AccountController.updateAccounts';
+option-end
+import updateAccounts from '@salesforce/apex/AccountController.updateAccounts';
+section-end
+correct=B

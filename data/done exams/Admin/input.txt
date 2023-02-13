@@ -1,0 +1,19 @@
+begin question
+Cloud Kicks users are seeing error messages when they use one of their screen flows. The error messages are confusing but could be resolved if the users entered more information on the account before starting the flow. 
+
+How should the administrator address this issues?
+end question
+type-1
+begin option
+Remove validation rules so that the users are able to process without complete records.
+end option
+begin option
+Create a permission set to allow users to bypass the error.
+end option
+begin option correct
+use a fault connector and display a screen with text explaining what went wrong and how to correct it.
+end option
+begin option
+Uncheck the end user Flow Errors box in setup.
+end option
+end file

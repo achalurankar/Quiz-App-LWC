@@ -1,0 +1,27 @@
+[
+    {
+        "questionId" : "string",
+        "text" : "Who won uefa champions league in 2017",
+        "type" : "single",
+        "correctOptions" : [
+            {
+                "id" : "string",
+                "text" : "Real Madrid"
+            }
+        ],
+        "incorrectOptions" : [
+            {
+                "id" : "string",
+                "text" : "Juventus"
+            }, 
+            {
+                "id" : "string",
+                "text" : "Barcelona"
+            }, 
+            {
+                "id" : "string",
+                "text" : "Bayern Munich"
+            }
+        ]
+    }
+]

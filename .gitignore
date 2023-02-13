@@ -3,7 +3,6 @@
 # For useful gitignore templates see: https://github.com/github/gitignore
 
 # Local Files
-data/
 designs/
 scripts/
 

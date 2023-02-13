@@ -1,0 +1,10 @@
+[
+    {
+        "questionId" : "string",
+        "selectedOptionId" : "string"
+    }, 
+    {
+        "questionId" : "string",
+        "selectedOptionId" : "string"
+    }
+]

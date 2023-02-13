@@ -1,0 +1,246 @@
+1. Which tool should an administrator use to identify and fix potential session vulnerabilities?
+
+A. Field History Tracking
+B. Security Health Check
+C. Organization Wide Defaults
+D. Setup Audit Trail
+
+2. Northen Trail Outfitters wants to calculate how much revenue has been generated for each of its marketing campaigns
+
+How should an administrator deliver this information?
+
+A. Perform periodic data jobs to update campaign records.
+B. Create a roll-up summary field on Opportunity to Campaign.
+C. Add a Total Value field on Campaign and use a workflow rule to update the value when an opportunity is won
+D. Design a standard Campaign report and add the Value Won Opportunities in Campaign field
+
+3. What should an administrator use as an identifier when importing and updating records from a separate finance system?
+
+A. Rich Text Field
+B. Record ID
+C. Auto-Number field
+D. External ID
+
+4. An administrator at Cloud Kicks wants to deactivate a user who has left the company.
+
+What are two reasons that would prevent a user from being deactivated?
+
+A. The user is the highest role in the role hierarchy
+B. The user is assigned in a workflow email alert
+C. The user is in a custom hierarchy field
+D. The user is part of a territory hierarchy
+
+5. The Sales manager at DreamHouse Realty wants the sales users to have a quick way to view and edit the Opportunities in their pipeline expected to close in the next 90 days.
+
+What should an administrator do to accomplish this request?
+
+A. Create a custom report and schedule the sales users to receive it each day as a reminder to update their opportunities
+B. Enable the Sales Console and show users how to open a tab for each opportunity in the pipeline that meets the requirements
+C. Create a list view on the Opportunity object and recommend users switch the view to Kanban to edit by drag and drop
+D. Make a new Sales dashboard and add a component that shows all opportunities that meet the criteria
+
+6. Cloud Kicks wants to track shoe designs by products. Shoe designs should be unable to be deleted, and there can be multiple designs for one product across various stages
+
+Which two steps should the administrator configure to meet the requirements?
+
+A. Add a custom master-detail field for shoe designs on the Product object.
+B. Create a custom object for show designs.
+C. Use a standard object for designs.
+D. Configure a custom lookup field for shoe designs on the Product object
+
+7. AW Computing would like to improve its Case Lightning record page by including:
+- A filtered component to display a message in bold font when a case is saved as a critical record type.
+- A quick way to update the Account status from the Case layout
+
+Which two components should an administrator use to satisfy these requests?
+
+A. Related list
+B. Related record
+C. Record detail
+D. Rich text
+
+8. Ursa Major Solar offers amazing experiences for all its employees. The employee engagement committe were to post updates whle restricting other employees from posting.
+
+What should the administrator create to meet this request
+
+A. Chatter Broadcast Group
+B. Chatter Recommendations
+C. Chatter Unlisted Group
+D. Chatter Stream
+
+9. Northen Trail Outfitters wants to initiate expense reports from Salesforce to the external HR system. This process needs to be reviewed by managers and directors
+Which two tools should an administrator configure?
+
+A. Outbound Message
+B. Approval Process
+C. Email Alert Action
+D. Quick Action
+
+10. The administrator at AW Computing wants Account details, related lists, and Chatter feeds to each appear on separate tabs when viewing an Account.
+Which type of page should the administrator create?
+
+A. Lightning app page
+B. Lightning page component
+C. Lightning page tab
+D. Lightning record page
+
+11. Ursa Major Solar has a path on Case. The company wants to require its users to follow the status values as they are on the path. Agents should be prohibited from reverting the Case back to a previous status.
+Which feature should an administrator use to fulfill this request?
+
+A. Global Value Picklists
+B. Predefined Field values
+C. Dependent Picklists
+D. Validation Rules
+
+12. Ursa Major Solar is noticing a decrease in deal with a cross-sell opportunity type and want to share all cross-sell opportunities with a team of subject matter experts in their organization. The company has different roles, the organization-wide default for Opportunity is set to Private.
+How should the administrator accomplish this?
+
+A. Enable territory management, assign the subject matter experts to the same territory, and give them access to the records with manual sharing
+B. Add the subject matter experts to a public group and give them access to the records with a criteria-based sharing rule
+C. Create a new role for the subject matter experts and give them access to the records with an owner-based sharing rule.
+D. Change the organization-wide default for Opportunity from Private to Public Read/Write to open up access for the subject matter experts.
+
+13. The administrator for Cloud Kicks needs to give access to a new custom object with custom fields to more than one user.
+Which two options should an administrator use to meet this requirement?
+
+A. Create a permission set
+B. Edit organization-wide defaults
+C. Assign permission set group to Users
+D. Add to manual sharing list
+
+14. Sales reps at Northen Trail Outfitters have asked for a way to change the Probability field value of their Opportunities.
+What should an administrator suggest to meet this request?
+
+A. Make the field editable on page layouts
+B. Create a custom field on Opportunity
+C. Configure Forecasting support
+D. Define a new Stage picklist value
+
+15. Northen Trail Outfitters wants to encourage employees to choose secure and appropriate passwords for the Salesforce accounts.
+Which three passoword policies should an administrator configure?
+
+A. Number of days until expiration
+B. Password complexity requirements
+C. Require use of Password Manager App
+D. Prohibited password values
+E. Maximum invalid login attempts
+
+16. An administrator installed a managed package that contains a permission set group. The permission set group that was installed included Delete access on several objects, and the administrator needs to prevent users in the permission set group from benig able to delete records.
+What should the administrator do to control Delete access?
+
+A. Edit the profile for the users to remove Delete access from the objects
+B. Create a new permission set that has Delete access deselected for the objects
+C. Use a muting permission set with a permission set group to mute selected permission
+D. Create a new role that prevents Delete permissions from rolling up to the Users.
+
+17. A team of support users at Cloud Kicks is helping inside sales reps make follow-up calls to prospects that filled an interest form online. The team currently does not have access to the Lead object.
+How should an administrator provide proper access?
+
+A. Configure permission sets
+B. Create a new profile 
+C. Set up Manual sharing
+D. Assign a new role
+
+18. Cloud Kicks has a screen flow with two questions on the same screen but only one is neccessary at a time. The administrator has been asked to show only the question that is needed
+How should an administrator complete this?
+
+A. Use conditional visibility to hide the unncessary question
+B. Use branching in the flow screen to show the proper scenario
+C. Use a decision element and a new screen to show the proper question
+D. Use a new version of the flow for each scenario
+
+19. The administrator at AW Computing wants to send off client welcome tasks and a welcome email to the primary contact automatically when an opportunity is closed won.
+What automation tool best accomplish this?
+
+A. Approval Process
+B. Process Builder
+C. Outbound Message
+D. Validation Rule
+
+20. Users at Cloud Kicks are reporting different options when updating a custom picklist on the Opportunity object based on the kind of opportunity
+Where should an administrator update the option in the picklist?
+
+A. Picklist value sets
+B. Related lookup filters
+C. Fields and relationships
+D. Record type
+
+21. Cloud Kicks (CK) is partnering with a used shoe store and second-hand bicyle emporium. CK has an automated business process it wants to run once a week to count the number of open cases related to an account.
+How should the administrator recommend automating this business process?
+
+A. Configure a scheduled flow in Flow Builder.
+B. Create a workflow rule with an Outbound message.
+C. Set up a scheduled process in Process Builder
+D. Use a process to update the account when it is edited
+
+22. The administrator for Cloud Kicks has created a screen flow to help service reps ask the same set of questions when customers call in the issues. This screen should be visible from cases.
+How should the screen flow be distributed?
+
+A. Home Page
+B. Page Layout
+C. Component Filter
+D. Lightning Page
+
+23. Sales users at Universal Containers are reporting that is taking a long time to edit opportunity records. Normally, the only field they are editing is the Stage field.
+Which two options should the administrator recommend to help simplify the process?
+
+A. Add a Path for stage to the opportunity record page
+B. Use a Kanban list view for Opportunity
+C. Create a simplified Opportunity page layout
+D. Configure an autolaunched flow for Opportunity editing
+
+24. Universal Containers introduced a new product and wants to track all associated cases that get logged. They are looking for an automated solution that would give the product's two lead engineers read/write access to all new cases that reference the new product.
+What should an administrator do to satisfy this requirement?
+
+A. Create an auto-response rule and a public group
+B. Create a predefined case team and an assignment rule
+C. Create a user-based sharing rule and an ad-hoc case team
+D. Create a queue and a criteria-based sharing rule
+
+25. Cloud Kicks has a custom object called Shipments. The company wants to see all the shipment items frrfom an Account page. When an account is deleted, the shipments should remain.
+What type of relationship should the administrator make between Shipments and Accounts?
+
+A. Accounts should have a master detail to Shipments.
+B. Shipments should have a master detail to Accounts.
+C. Shipments should have a lookup to Account
+D. Accounts should have a lookup to Shipments
+
+26. Sales and Customer Care at Ursa Major Solar need to see different fields on the Case related list from the Account record. Sales users want to see Case created date and status whle Customer Care would like to see owner, status, and contact
+What should the administrator use to achieve this?
+
+A. Page Layout Editor
+B. Search Layout Editor
+C. Related Lookup Filters
+D. Compact Layout Editor
+
+27. Ursa Major Solar has service level agreements (SLA) that are routed to support queues. Cases that meet the 24 hour SLA need to be automatically re-assigned to the next tier queue.
+Which feature should be used to fulfill this requirement?
+
+A. Case escalation rule
+B. Case assignment rule
+C. Auto-response rule
+D. Einstein Case Routing
+
+28. An administrator at Northen Trail Outfitters is unable to add a new user in Salesforce.
+What could cause this issue?
+
+A. The username is restricted to a domain specific to my domain
+B. The username is already in use another organization
+C. The email address used for the username has a contact record
+D. The email used for the username is not a corporate email address.
+
+29. An administrator at Universal Containers has been asked to prevent users from accessing Salesforce from their network.
+What are two considerations for this configuration?
+
+A. Restrict U2F Security Keys on the user's profile to enforce login hours.
+B. IP address restrictions are set on the profile or globally for the org.
+C. Enforce Login IP Ranges on Every Request must be selected to enforce IP restrictions
+D. Assign single sign-on to a permission set to allow users to log in when outside the network
+
+30. What are three settings an administrator should configure to make it easy for approvers  to response to approval requests?
+
+A. Enable the organization's email approval response setting
+B. Update the organization's Chatter settings to allow approvals
+C. Specify initial submission actions within the approval process.
+D. Create a flow to automatically approve all records
+E. Add the Items to Approve component to the approvers' home page.

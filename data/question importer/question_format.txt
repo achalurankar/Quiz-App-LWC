@@ -1,0 +1,31 @@
+this is a question
+that was on a new line
+section-end
+question-type=triple
+section-end
+somewhere
+option-end
+you
+option-end
+belong
+option-end
+vinland
+option-end
+saga
+section-end
+correct=A,B,D
+new-question
+this is an another question
+which was again on the new line
+section-end
+question-type=double
+section-end
+another
+option-end
+place
+option-end
+you
+option-end
+belong
+section-end
+correct=B,C

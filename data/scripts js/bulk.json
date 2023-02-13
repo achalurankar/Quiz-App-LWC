@@ -1,0 +1,24 @@
+[
+    {
+        "text" : "Refer to the code below:\nconst p1 = 3.1415926;\nWhat is the data type of p1?",
+        "type" : "Single",
+        "options" : [
+            {
+                "text" : "Number",
+                "correct" : true
+            },
+            {
+                "text" : "Double",
+                "correct" : false
+            },
+            {
+                "text" : "Decimal",
+                "correct" : false
+            },
+            {
+                "text" : "Float",
+                "correct" : false
+            }
+        ]
+    }
+]

@@ -1,0 +1,478 @@
+Que 1: An administrator at Universal Containers has been asked to prevent users from accessing Salesforce from outside of their network. What are two considerations for this configuration?
+	a.Ip Address Restrictions Are Set On The Profile Or Globally For The Org.--(Correct)
+	b.Users can change their password to avoid login IP restrictions.
+	c.Enforce Login Ip Ranges On Every Request Must Be Selected To Enforce Ip Restrictions.--(Correct)
+	d.Single sign-on will allow users to log in from anywhere.
+	
+Que 2: Ursa Major Solar wants its sales reps to be aware when they are speaking with high-profile customers.
+
+	Which two options should be added to the Lightning record pages to achieve this?
+
+	Choose 2 answers
+
+	a.Custom Component--(Correct)
+	b.Highlight Panel
+	c.Action and Recommendations--(Correct)
+	d.Component Visibility Filter
+	e.Rich Text Area
+	
+Que 3: Which two actions should an administrator perform with Case escalation rules? Choose 2 answers
+	A . Change the Case Priority.
+	B . Re-open the Case.
+	C . Re-assign the Case.--(Correct)
+	D . Send email notifications--(Correct)
+	
+Que 4: Northern Trail Outfitters wants to use Contact Hierarchy in its org to display Contact association.
+
+	What should the administrator take into consideration regarding the Contact Hierarchy?
+	A . Contacts displayed in the Contact Hierarchy are limited to record-level access by user.--(Correct)
+	B . Contact Hierarchy is limited to only display 3,000 contacts at one time.
+	C . Customizing hierarchy columns changes the Recently Viewed Contacts list view.
+	D . Sharing settings are ignored by contacts displayed in the Contact Hierarchy.
+	
+Que 5: Northern Trail Outfitters uses a custom object Invoice to collect customer payment information from an external billing system. The Billing System field needs to be filled in on every Invoice record.
+How should an administrator ensure this requirement?
+	a. Require the field on the record type.
+	b. Create a Process Builder to set the field.
+	c. Define an approval process for the field.
+	d. Make the field universally required.--(Correct)
+	
+Que 6: Northern Trail Outfitters has a custom quick action on Account that creates a new Case.
+
+How should an administrator make the quick action available on the Salesforce mobile app?
+
+	A.Create a custom Lightning App with the action.
+	B.Modify compact Case page layout to include the action.
+	C.Include the action in the Salesforce Mobile Navigation menu.
+	D.Add the Salesforce Mobile and Lightning Experience action to the page layout.--(Correct)
+	
+Que 7: The support manager at Cloud Kicks wants to respond to customers as quickly as possible.
+They have requested that the response include the top five troubleshooting tips that could help solve the customer's issue.
+What should the administrator suggest to meet these requirement?
+
+	A: Auto-Response Rules--(Correct)
+	B: Email Alerts
+	C: Knowledge Articles
+	D: Assignment Rules
+	
+Que 8: When a Sales rep clicks a button on an opportunity, a simple discount calculator screen should be launched. Which automation tool should an administrator use to build this discount calculator screen?
+	a.Flow Builder--(Correct)
+	b.Workflow Rule
+	c.Platform Event
+	d.Process Builder
+	
+Que 9: Users at Cloud Kicks are reporting different options when uploading a custom picklist on the
+Opportunity object based on the kind of opportunity.
+Where Should an administrator update the option in the picklist?
+	A. Fields and relationships
+	B. Related lookup filters
+	C. Record Type--(Correct)
+	D. Picklist value sets
+	
+Que 10: The administrator for Cloud Kicks needs to give access to a new custom object with custom fields to more than one user. Which two options should an administrator use to meet this requirement?
+	a.Add to manual sharing list--(Correct)
+	b.Assign permission set group to Users
+	c.Create a Permission Set--(Correct)
+	d.Edit organization-wide defaults
+	
+Que 11: Cloud Kicks users are seeing error messages when they use one of their screen flows. The error messages are confusing but could be resolved if the users entered more information on the account before starting the flow. How should the administrator address this issues?
+	a.Remove validation rules so that the users are able to process without complete records.
+	b.Create a permission set to allow users to bypass the error.
+	c.use a fault connector and display a screen with text explaining what went wrong and how to correct it.--(Correct)
+	d.Uncheck the end user Flow Errors box in setup.
+	
+Que 12: Universal Containers requires a different Lightning page to be displayed when Accounts are viewed In the Sales Console and In the Service Console.
+
+How should an administrator meet this requirement?
+	A . Define multiple record types.
+	B . Create different user profiles.
+	C . Update page layout assignments.--(Correct)
+	D . Assign Lightning pages as app default.
+	
+Que 13: The business development team at Cloud Kicks thinks the Account creation process has too many fields to fill out and the page feels cluttered. They have requested the administrator to simplify the process.
+Which automation tool should an administrator use?
+
+	A. Flow Builder--(Correct)
+	B. Workflow Rule
+	C. Approval Process
+	D. Validation Rule
+	
+Que 14: DreamHouse realty has an approval process. A manager attempts to approve the record but receives an error. What should an administrator review to troubleshoot this request?
+	a.Add a delegated approver for the next approver in the process.
+	b.Update the field level security to view on fields that are updated in the process.
+	c.Check if the user in the next approver is inactive or missing.--(Correct)
+	d.Review the page layout to ensure, the fields updated in the process are visible.
+	
+Que 15: Universal Containers wants to provide reseller partners with discounted prices on the products they purchase.
+
+How should an administrator configure this requirement? Calculator
+	A . Create a separate PriceBook for reseller partners.--(Correct)
+	B . Use a different Opportunity record type.
+	C . Create separate reseller partner products.
+	D . Add a Partner_Discount__c field to the Opportunity.
+	
+Que 16: The administrator at cloud kicks has been told that users are unable to add repeating tasks in salesforce. Which two solutions the administrator use to ensure users are able to do this?
+	a.Enable creation of Recurring Tasks in Activity Settings.--(Correct)
+	b.Disable shares Activities.
+	c.Add create Recurring series of Tasks field on Page Layouts.--(Correct)
+	d.Turn on Task Notifications service.
+	
+Que 17: Northern Trail Outfitters has two different sales processes: one for business opportunities with four stages and one for partner opportunities with eight stages. Both processes will vary in page layouts and picklist value options.
+What should an administrator configure to meet these requirements?
+
+	A. Validation rules that ensure that users are entering accurate sales stage Information
+	B. Public groups to limit record types and sales processes for opportunities.
+	C. Separate record types and sales processes for the different types of opportunities--(Correct)
+	D. Different page layouts that control the picklist values for the opportunity types
+	
+Que 18: The service manager at Ursa Major Solar wants to let customers know that they have received their cases via email and their websites. Medium-priority and high-priority cases should receive different email notifications than low-priority cases. The administrator has created three email templates for this purpose. How should an administrator configure this requirement?
+	a.Include three assignment rules that fire when cases are created. Add a filter for case priority. Select the appropriate email template for each rule.
+	b.Add three auto-response rules. Configure one rule entry criteria for each rule and set a filter for case priority. Select the appropriate email template for each rule entry.
+	c.Configure one workflow rule that fires when cases are created. Add a filter for case priority. Select the appropriate email template for the rule.
+	d.Create one auto-response rule. Configure three rule entry criteria and set a filter for case priority. Select the appropriate email template for each rule entry.--(Correct)
+	
+Que 19: Universal Containers introduced a new product and wants to track all associated cases that get logged. They are looking for an automated solution that would give the product's two lead engineers read/write access to all new cases that reference the new product.
+What should an administrator do to satisfy this requirement?
+	A. Create an auto-response rule and a public group.
+	B. Create a predefined case team and an assignment rule.
+	C. Create a user-based sharing rule and an ad-hoc case team.
+	D. Create a queue and a criteria-based sharing rule.--(Correct)
+	
+Que 20: Universal Containers has two sales teams, sales team A and sales team B. Each team has their own role in the role hierarchy. Both roles are subordinates of the same Manager role.
+
+How should the administrator share records owned by sales team A with sales team B?
+
+	A.Criteria-based sharing
+	B.Use manual sharing
+	C.Owner-based sharing--(Correct)
+	D.Hierarchical sharing
+	
+Que 21: Sales and Customer Care at Ursa Major Solar need to see different fields on the Case related list from the Account record. Sales users want to see Case created date and status while Customer Care would like to see owner, status, and contact. What should the administrator use to achieve this?
+	a.Related Lookup Filters
+	b.Compact Layout Editor
+	c.Page Layout Editor--(Correct)
+	d.Search Layout Editor
+	
+Que 22: The administrator at Cloud kicks deleted a custom field but realized there is a business unit that still uses the field. What should an administrator take into consideration when undeleting the field?
+	a.The field needs to be re-added to reports.
+	b.The field history will remain deleted.
+	c.The field needs to be restored in the search settings.--(Correct)
+	d.The field mapping needs to be re-mapped.
+
+Que 23: At Universal Containers, there is a custom field on the Lead named Product_Category_c. Management would like this information to be part of the opportunity upon lead conversion.
+What action should the administrator take to satisfy the request?
+	A. Create a custom field on the Opportunity and map the two fields.--(Correct)
+	B. Crete a workflow to update opportunity fields based on the lead.
+	C. Configure the product categories picklist field on the product.
+	D. Map the lead custom field to the product' product category field.
+	
+Que 24: Universal Containers created a new job posting on the first of the month. It triggered a process scheduled action that will send a Chatter post to the department VP th in 30 days if the position is still open and the status is NOT equal to Interviewing. On the 10 of the month, an application interviews, and the job posting status is updated to Interviewing.
+What will happen to the Chatter post in this situation?
+	A. The pending Chatter post will be sent in 30 days.--(Correct)
+	B. The pending Chatter post will be canceled.
+	C. The pending Chatter post will be paused.
+	D. The pending Chatter post will be sent on the 10 th of the month.
+	
+Que 25: Ursa Major Solar wants to assist users with a guided expense report process to simplify submissions, routing, and authorizations Which two tools should an administrator use to build this solution?
+Choose 2 answers
+
+	A. Flow Builder--(Correct)
+	B. Quick Action
+	C. Validation Rule
+	D. Approval Process--(Correct)
+	
+Que 26: Cloud kicks wants to track shoe designs by-products. Shoe designs should be unable to be deleted, and there can be multiple designs for one product across various stages. Which two steps should the administration configure to meet this requirement?
+	a.Create a Custom Object for shoe design.--(Correct)
+	b.Configure a Custom Lookup Field for shoe design on the product object.
+	c.Add a custom master detail field for shoe design on the Product Object.--(Correct)
+	d.Use the Standard Object for designs.
+	
+Que 27: An administrator at Cloud Kicks wants to deactivate a User who has left the company. What are two reasons that would prevent a user from being deactivated?
+	a.The use is part of a territory hierarchy.
+	b.The User is in a Custom hierarchy field.--(Correct)
+	c.The User is assigned in workflow email alert.--(Correct)
+	d.The User is the highest role in the role hierarchy.
+	
+Que 28: A sales rep has a list of 300 accounts with contacts that they want to load at one time. Which tool should the administrator utilize to import the records to salesforce?
+	a.Dataloader.io
+	b.Data Loader
+	c.Manual Import
+	d.Data Import Wizard--(Correct)
+	
+Que 29: Support agent at Cloud Kicks are spending too much time finding resources to solve cases.
+The agents need a more efficient way to find documentation and similar cases from the Case page layout.
+How should an administrator meet this requirement?
+
+	A: Create a custom object to capture popular case resolutions.
+	B: Use an interview flow to capture Case details.
+	C: Direct users to Global Search to look for similar cases.--(Correct)
+	D: Configure Knowledge with articles and data categories.
+	
+Que 30: Cloud Kicks wants to try out an app from the App Exchange to ensure that the app meets its needs. Which two options should the administrator suggest?
+	a.Test Drive in a production org.
+	b.Download into a Trailhead Playground.--(Correct)
+	c.Install in a sandbox.--(Correct)
+	d.Check edition compatibility.
+	
+Que 31: The administrator at Ursa Major Solar need to make sure the unassigned cases from VP customers get transferred to the appropriate service representative within 5 hours. VIP Customers have access to support 24 hours a day.
+
+How should this be configured?
+
+	a.Assignment Rules.--(Correct)
+	b.Business Hours.
+	c.Case Queues
+	d.Escalation Rules
+	
+Que 32: The Call centre manager in Ursa Major Solar wants to provide agents with a case dashboard that can be drilled down by case origin, status and owner.
+
+What should an Administrator add to the dashboard to fulfil the request?
+
+	a.Dashboard Filter--(Correct)
+	b.Bucket column
+	c.Dashboard component
+	d.Combination Chart
+	
+Que 33: Cloud Kicks has asked the administrator to test a new screen flow that creates contacts.
+
+What are two key components of testing the flow? Choose 2 answers
+	A . Set up a flow interview to test the flow.--(Correct)
+	B . Run the flow using it to create contacts.
+	C . Test the flow in a sandbox.
+	D . Use Debug to test the flow in Flow Builder.--(Correct)
+	
+Que 34: AW Computing (AWC) occasionally works with independent contractors, who the company stores
+as Contacts in Salesforce. Contractors often change agencies, and AWC wants to maintain the
+historical accuracy of the record.
+What should AWC use to track Contacts?
+	A. Use a partner community to track the Contacts.
+	B. Create a new Contact record for each agency.
+	C. Create a Junction object to track many-to-many relationship.
+	D. Enable Contacts to multiple Accounts.--(Correct)
+	
+Que 35: AW Computing has six sales teams in a region. These teams always consists of the same account manager, engineer, and assistant. What should the administrator configure to make it easier for teams to collaborate with the same customer?
+	a.Enable and configure standard opportunity teams with splits.
+	b.Enable account teams and show the users how to set up a default account team.--(Correct)
+	c.Create a queue for each team and assign account ownership to the queue.
+	d.Propose the users manually share all their accounts with their teammates.
+	
+Que 36: When users log In to Salesforce via the user interface, which two settings does the system check for authentication? Choose 2 answers
+	A . The user’s TWo-Factor Authentication for API Logins permission
+	B . The role IP address restrictions
+	C . The users TWo-Factor Authentication for User Interface Logins permission--(Correct)
+	D . The user’s profile login hours restrictions--(Correct)
+	
+Que 37: A sales rep at Ursa Major Solar has launched a series of networking events. They are hosting one event per month and want to be able to report on campaign ROI by month and series. How should the administrator set up the Campaign to simplify reporting?
+	a.Add different record types for the monthly event types.
+	b.Create individual Campaigns that all have the same name.
+	c.Configure campaign Member Statuses to record which event members attended.--(Correct)
+	d.Use Campaign Hierarchy where the monthly events roll up to a parent Campaign.
+	
+Que 38: An administrator at Northern Trail Outfitters is creating a validation rule.
+
+Which two functions should the administrator use when creating a validation rule? Choose 2 answers
+	a.Error message location--(Correct)
+	b.Error condition formula--(Correct)
+	c.Formula return type
+	d.Rule active date
+	
+Que 39: A user is having trouble logging into Salesforce. The user’s login history shows that this person has attempted log in multiple times and has been locked out of organization. How can the system administrator help the user log into Salesforce?
+	a.Reset Password on the user’s record detail page.--(Correct)
+	b.Reset the password policies to allow the user to login.
+	c.Use the unlock button on the user’s record detail page.--(Correct)
+	d.login as the user to unlock the user and reset the password.
+	
+Que 40: An administrator has assigned a permission set group with the two-factor authentication for User Interface Logins permissions and the two-factor authentication for API Logins permission to a group of users. Which two prompts will happen when one of the users attempts to log in to Data Loader?
+	a.Users Need To Download And Install An Authenticator App On Their Mobile Device.--(Correct)
+	b.Users need to enter a verification code from email or SMS, whichever has higher priority.
+	c.Users Need To Connect An Authenticator App To Their Salesforce Account.--(Correct)
+	d.Users need to get a security token from a trusted network using Reset My Security Token.
+	
+Que 41: Ursa Major Solar offers amazing experiences for all of its employees. The employee engagement committee wants to post updates while restricting other employees from posting.
+
+What should the administrator create to meet this request?
+
+	a.Chatter Stream
+	b.Chatter Unlisted Group
+	c.Chatter Recommendations
+	d.Chatter Broadcast Group--(Correct)
+	
+Que 42: Northern Trail Outfitters has requested that when the Referral Date field is updated on the custom object Referral Source, the parent object Referral also needs to be updated.
+
+Which automation solution should an administrator use to meet this request?
+	A . Approval Process
+	B . Workflow Field Update
+	C . Lightning Web Component
+	D . Process Builder--(Correct)
+	
+Que 43: The marketing director at Northern Trail Outfitters has requested that the budget field is populated in
+
+order for the Lead Status field to be marked as qualified.
+
+What tool should the administrator use to fulfill this request?
+
+	A.Lead Conversion.
+	B.Require Field.
+	C.Workflow Rule
+	D.Validation Rule--(Correct)
+	
+Que 44: Users at Cloud Kicks want to see information more useful for their role on the Case page.
+
+How should an administrator make the pages more dynamic and easier to use?
+	A . Delete the extra components from the page.
+	B . Remove fields from the record details component.
+	C . Add component visibility filters to the components.--(Correct)
+	D . Include more tab components with filters.
+	
+Que 45: An administrator at dream house realty wants an easier way to assign cases based on the agent capacity and still set.
+
+	A. Escalation rules
+	B. Omni channel--(Correct)
+	C. Territory management
+	D. Knowledge management
+	
+Que 46: Ursa Major Solar is noticing a decrease in deals with a cross-sell opportunity type and want to share all cross-sell opportunities with a team of subject matter experts in their organization. The company has different roles, and the organization-wide default for Opportunity is set to Private.
+How should the administrator accomplish this?
+	A. Add the subject matter experts to a public group and give them access to the records with a criteria-based sharing rule.--(Correct)
+	B. Change the organization-wide default for Opportunity from Private to Public Read/Write to open up access for the subject matter experts.
+	C. Enable territory management, assign the subject matter experts to the same territory, and give them access to the records with manual sharing.
+	D. Create a new role for the subject matter experts and give them access to the records with an owner-based sharing rule.
+	
+Que 47: The marketing team at Ursa Major Solar wants to send a personalized email whenever a lead fills out the web-to-Lead form on their website. They want to send different Message based on the Lead Industry Field Value. What Should an administrator configure to meet this requirement?
+	a.Use Validation rule to trigger workflow to email to Lead.
+	b.Configure an auto response rule to email the lead.--(Correct)
+	c.Add a public group and process builder to email the lead.
+	d.Create an assignment rule to email the lead.
+	
+Que 48: An administrator Creates a custom text area field on the Account object and adds it to the service team’s page layout. The services team manager loves the addition of this field and wants it to appearin the highlights panel so that the services reps can quickly find it when on the Account Page. How should the administrator accomplish this?
+	a.Create a new page layout and a new section titled highlights panel.
+	b.In the Account object manager, create a custom compact layout.--(Correct)
+	c.From the page layout editor, drag the field to the highlights panel.
+	d.Make the field required and move it to the top of the page.
+	
+Que 49: Cloud Kicks is working on a better way to track its product shipments utilizing Salesforce. Which field type should an administrator use to capture coordinates?
+	a.Geolocation--(Correct)
+	b.Geofence
+	c.Custom address
+	d.External lookup
+	
+Que 50: Universal Containers has a private sharing model for Opportunities and uses Opportunity Teams. Criteria-based sharing rules are not used. A sales rep at
+Universal Containers leaves the company and their user record is deactivated. The rep is later rehired in the same rile. The Salesforce administrator activates the old user record. The user is added to the same default Opportunity Teams, but is no longer able to see the same records the user worked on before leaving the company.
+What is the likely cause?
+	A. The records were manually shared with the user.--(Correct)
+	B. The Stage of the Opportunity records was changed to Closed Lost.
+	C. Permission sets were removed when the user was deactivated.
+	D. The Record Type of the Opportunity records was changed.
+	
+Que 51: The administrator at Cloud Kicks updated the custom object Event to include a lookup field to the primary contact for the event. When running an event report, they want to reference fields from the associated contact record.
+
+What should the administrator do to pull contact fields into the custom report?
+	A . Create a new report type with Event as the primary object and Contact as a related object.
+	B . Use a dashboard with filters to show Event and contact data as requested.
+	C . Configure formula fields on Event to populate contact information.
+	D . Edit the custom Event report type and add fields related via lookup.--(Correct)
+	
+Que 52: Cloud kicks has the organization-wide sharing default set to private on the shoe object. The sales manager should be able to view a report containing shoe records for all of the sales reps on their team. Which 3 items should the administrator configure to provide appropriate access to the report?
+	a.Custom report type.
+	b.Folder access.--(Correct)
+	c.Report subscription.
+	d.Field level security.--(Correct)
+	e.Role hierarchy--(Correct)
+	
+Que 53: An administrator has reviewed an upcoming critical update. How should the administrator proceed with activation of the critical update?
+	a.Activate the critical update in a sandbox.--(Correct)
+	b.Allow the critical update to auto-activate.
+	c.Activate the critical update in production.
+	d.Allow the critical update to auto-activate in a sandbox.
+	
+Que 54: The Sales Director at Cloud Kicks wants to be able to predict upcoming revenue in the next several fiscal quarters so they can set goals and benchmark how reps are performing. Which two features should the administrator configure?
+	a.Sales Quotes--(Correct)
+	b.Opportunity List View
+	c.Forecasting--(Correct)
+	d.Opportunity Stages
+	
+Que 55: An administrator at Cloud Kicks needs to export a file of closed won opportunities from the last 90 days. The file should include the Opportunity Name, ID, Close Date, and Amount.
+
+How should the administrator export this file?
+	A . Data Import Wizard
+	B . Data Loader--(Correct)
+	C . Data Export Service
+	D . Data Export Wizard
+	
+Que 56: Cloud Kicks executives have noticed the opportunity Expected revenue Field displays incorrect values. How Should the administrator correct this?
+	a.Update the expected revenue associated with the stage.
+	b.Adjust the forecast category associated with the stage.
+	c.Modify the closed won value associated with the stage.
+	d.Change the probability associated with the stage.--(Correct)
+	
+Que 57: The IT manager at universal Containers is doing an audit of the systems security. How should the administrator provide a summary of the org's security health? 
+
+	A. Change the Organization-Wide Default to private to restrict visibility. 
+	B. Turn on Event Monitoring to track user events. 
+	C. Download the last six months of user login data. 
+	D. Run a Health Check to identify vulnerabilities.--(Correct)
+	
+Que 58: The administrator has created new users for 10 new employees at Universal Containers. Why are these users unable to access the account object in the Salesforce org"?
+	A. Organization-wide defaults are set to private.
+	B. Users' profile requires a sharing rule for accounts.
+	C. Users' profile requires permission to the account object.--(Correct)
+	D. Users' roles are low on the Role hierarchy.
+	
+Que 59: The Client services and customer support teams share the same profile but have different
+permission sets. The Custom Object Retention related list needs to be restricted to the client services
+team
+on the Lightning record page layout.
+What should the administrator use to fulfil this request?
+	A. Sharing settings
+	B. Page Layout Assignment
+	C. Component Visibility--(Correct)
+	D. Record Type Assignment
+	
+Que 60: What are three characteristics of a master-detail relationship?
+	a.The Master Object Can Be A Standard Or Custom Object.--(Correct)
+	b.Permissions for the detail record are set independently of the master.
+	c.Each object can have up to five master-detail relationships.
+	d.Roll-up Summaries Are Supported In Master-detail Relationships.--(Correct)
+	e.The owner field on the detail records is the owner of the master record.--(Correct)
+	
+Que 61: The administrator at universal containers has a screen flow that helps users create new leads.
+When lead source is “Search Engine”, the administrator needs to require the user to choose a specific
+a search engine from a picklist. If lead source is not “Search Engine”, this picklist should be hidden.
+How should the administrator complete this requirement?
+
+	A.Assign a decision element to direct the user to a second screen to hold specific search engine only
+	when a lead source is “Search Engine”.--(Correct)
+	B.Use an assignment element, one for when lead source is “Search Engine” and one for everything
+	else.
+	C.Create a picklist for specific search engine, and set conditional visibility so that is only shown
+	when lead source is “Search Engine”.
+	D.Configure a picklist for specific search engine, and use a validation rule to conditionally show only
+	when lead source is “Search Engine”
+	
+Que 62: Cloud Kicks (CK) has a new administrator who is asked to put together a memo detailing Salesforce usage to budget for upcoming license purchases.
+Where should the administrator go to find out what type of licenses CK has purchased and how many are available?
+	A. Search for licenses types in setup
+	B. User licenses related list in company information--(Correct)
+	C. SageNbASSR entitlements related list in company information
+	D. User management settings in setup in setup
+
+Que 63: Sales managers would like to know what could be implemented to surface important values based on the stage of the opportunity. Which tool should an administrator use to meet the requirement?
+	a.Dynamic forms
+	b.Path key fields--(Correct)
+	c.Opportunity processes
+	d.Workflow rules
+	
+Que 64: Northern Trail Outfitters wants to track ROI for contacts that are key stakeholders for opportunities. The VP of Sales requested that this information be accessible on the opportunity and available for reporting. Which two options should the administrator configure to meet these requirements?
+	a.Customize Campaign Member Role
+	b.Add the Campaign Member related list to the Opportunity page layout.
+	c.Customize Campaign Role.
+	d.Customize Opportunity Contact Role.--(Correct)
+	e.Add the Opportunity Contact Role related list to the Opportunity page layout.--(Correct)
+	
+Que 65: Northern Trail Oufitters has a new flow that automatically sets field values when a new account is created. The flow is launched by a process, but the flow is not working properly.
+
+	A.Use the native feature in the Flow Builder.--(Correct)
+	B.Review debug logs with the flow logging level.
+	C.View the setup audit trail and review for errors.
+	D.Set up email logs and review the send error logs.
+	
+	
