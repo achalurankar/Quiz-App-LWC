@@ -71,7 +71,7 @@ try {
             text : questionText,
             type : questionType,
             exam : 'PD2',
-            set : '1',
+            questionSet : '1',
             options : getStructuredOptions(options, correctOptions)
         })
     }

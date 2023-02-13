@@ -74,4 +74,4 @@ import updateAccounts from 'AccountController.updateAccounts';
 option-end
 import updateAccounts from '@salesforce/apex/AccountController.updateAccounts';
 section-end
-correct=B
+correct=D

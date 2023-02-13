@@ -1,0 +1,1 @@
+delete [SELECT Id FROM Question__c WHERE Exam__c = 'PD2'];
