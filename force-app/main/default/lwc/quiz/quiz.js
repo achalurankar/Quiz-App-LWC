@@ -1,5 +1,6 @@
 import { LightningElement, track } from 'lwc';
 import getQuestions from "@salesforce/apex/Quiz_CC.getQuestions";
+import getSetsAndExams from "@salesforce/apex/Quiz_CC.getSetsAndExams";
 
 export default class Quiz extends LightningElement {
 
@@ -10,8 +11,8 @@ export default class Quiz extends LightningElement {
     currentIntervalId = null
     @track selectedSet = null
     @track selectedExam = null
-    sets = [ {label : 'Set 1', value : '1'}, {label : 'Set 2', value : '2'}, {label : 'Set 3', value : '3'}, {label : 'Set 4', value : '4'}, {label : 'Extra', value : 'Extra'}]
-    exams = [ {label : 'PD1', value : 'PD1'}, {label : 'Admin', value : 'Admin'}]
+    sets = []
+    exams = []
     QUIZ_TIME_IN_MIN = 105
     QUIZ_TIME_LIMIT = this.QUIZ_TIME_IN_MIN * 60 * 1000 // 90 minutes into milliseconds
     currentQuizInstance
@@ -42,6 +43,13 @@ export default class Quiz extends LightningElement {
                 this.startTimer(Math.floor((this.QUIZ_TIME_LIMIT - (currTime - quizStartTime)) / 1000))
             }
         }
+        this.loadSetsAndExams()
+    }
+
+    async loadSetsAndExams() {
+        const response = await getSetsAndExams();
+        this.exams = response
+        this.sets = []
     }
     
     handleInputChange(event) {
@@ -49,6 +57,11 @@ export default class Quiz extends LightningElement {
             this.selectedSet = event.detail.value;
         } else if(event.target.name == 'exam') {
             this.selectedExam = event.detail.value;
+            for(let exam of this.exams) {
+                if(exam.value == this.selectedExam) {
+                    this.sets = exam.sets;
+                }
+            }
         } else if(event.target.name == 'sequence') {
             this.sequence = event.detail.checked
         } else if(event.target.name == 'revisit') {

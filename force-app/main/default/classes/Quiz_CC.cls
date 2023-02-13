@@ -33,5 +33,27 @@ public with sharing class Quiz_CC {
         }
     }
 
+    
+    @AuraEnabled
+    public static List<ExamWrapper> getSetsAndExams() {
+        Map<String, Set<String>> examVsSetsMap = new Map<String, Set<String>>();
+        List<Question__c> questions = [SELECT Id, Exam__c, Set__c FROM Question__c];
+        for(Question__c question : questions) {
+            if(examVsSetsMap.containsKey(question.Exam__c)) {
+                examVsSetsMap.get(question.Exam__c).add(question.Set__c);
+            } else {
+                examVsSetsMap.put(question.Exam__c, new Set<String> { question.Set__c });
+            }
+        }
+        List<ExamWrapper> exams = new List<ExamWrapper>(); 
+        for(String exam : examVsSetsMap.keySet()) {
+            exams.add(new ExamWrapper(
+                exam,
+                examVsSetsMap.get(exam)
+            ));
+        }
+        return exams;
+    }
+    
     public class InvalidDataException extends Exception {}
 }
