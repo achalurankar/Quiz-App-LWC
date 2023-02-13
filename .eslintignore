@@ -1,6 +1,7 @@
 **/lwc/**/*.css
 **/lwc/**/*.html
 **/lwc/**/*.json
+**/lwc/**/*.js
 **/lwc/**/*.svg
 **/lwc/**/*.xml
 **/aura/**/*.auradoc
