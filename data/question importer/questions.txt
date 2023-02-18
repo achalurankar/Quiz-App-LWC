@@ -75,3 +75,63 @@ option-end
 import updateAccounts from '@salesforce/apex/AccountController.updateAccounts';
 section-end
 correct=D
+new-question
+Which statement is considered a best practice for writing bulk safe Apex Triggers?
+section-end
+question-type=single
+section-end
+Add records to collections and perform DML operations against these collections
+option-end
+Perform all DML operations from withing a Future Method
+option-end
+Instead of DML statements, use the Database methods with allOrNone set to False.
+option-end
+Add LIMIT 50000 to every SOQL Statement.
+section-end
+correct=A
+new-question
+Universal Containers has an existing automation where a custom record called Account Plan is created upon on Account being marked as Customer. Recently,a Workflow Rule was added so that whenever an Account is marked as a Customer, a 'Customer Since' data field is updated with today's data.
+
+Now, since the addition of the Workflow Rule, two Account Plan records are created whenever the Account is marked as a Customer.
+
+What might cause this to happen?
+section-end
+question-type=single
+section-end
+The Apex Trigger responsible for the record creation does not use a static variable to ensure it only fires once.
+option-end
+The Process Builder responsible for the record creation fires before and after the Workflow rule.
+option-end
+The Workflow Rule responsible for the record creation fires twice because the 'Customer Since' field update is marked as 'Re-evaluate Workflow Rules After Field Change.'
+option-end
+The Apex Trigger responsible for the record creation is not bulk safe and calls insert inside of a for loop
+section-end
+correct=C
+new-question
+What is the best practice to initialize a Visualforce page in a test class?
+section-end
+question-type=single
+section-end
+Use Test.currentPage.getParameters.put(MyTestPage);
+option-end
+Use Test.setCurrentPage(Page.MyTestPage);
+option-end
+Use Test.setCurrentPage.MyTestPage;
+option-end
+Use Controler.currentPage.setPage(MyTestPage);
+section-end
+correct=B
+new-question
+
+section-end
+question-type=single
+section-end
+
+option-end
+
+option-end
+
+option-end
+
+section-end
+correct=C
