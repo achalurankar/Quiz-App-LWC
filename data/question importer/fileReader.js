@@ -78,6 +78,9 @@ try {
     let apexScript = `String reqStruc = '${JSON.stringify(questionsToSend)}';\nString response = QuestionCreator.createQuestions(reqStruc);\nSystem.debug('reponse=' + response);`
     fs.writeFileSync(writeFileLocation, apexScript)
     fs.writeFileSync(prettyJsonFileLocation, JSON.stringify(questionsToSend, null, 2))
+    fs.writeFileSync('requestStructure.json', JSON.stringify({
+        requestStructure : questionsToSend
+    }));
     console.log('file written successfully!');
 } catch(err) {
     console.error(err)
